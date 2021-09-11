@@ -40,7 +40,7 @@ function trashTalkPerson(options) {
       return (item.name);
     }
   })
-  console.log(tasker,randomTask,taskPerson)
+  // console.log(tasker,randomTask,taskPerson)
  
     trashTalker += `身為一個${taskPerson.chname}，${trashTaskIndex(tasker)}${trashTaskIndex(phrase)}吧!`;
   //  trashTalker += `身為一個${taskPerson.chname}，${trashTaskIndex(tasker)}${trashTaskIndex(phrase)}吧!`;

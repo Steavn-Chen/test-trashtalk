@@ -4,25 +4,28 @@
   </div>
   <form action="/" method="POST">
     <div class="card-deck">
-       {{#each personList}}
-         <div class="card">
-        <img src="{{this .image}}" class="card-img-top" alt="...">
-        <div class="card-body ">
-          <div class="custom-control custom-radio ">
-            <input type="radio" id="{{this.name}}" name="who" class="custom-control-input" value="{{this.name}}">
-            <label for="{{this.name}}" class="custom-control-label">{{this.chname}}</label>
+      {{#each personList}}
+        <div class="card">
+      {{!-- <label for="{{this.name}}"> --}}
+          <img src=" {{this .image}}" class="card-img-top" alt="...">
+          <div class="card-body ">
+            <div class="custom-control custom-radio ">
+              <input type="radio" id="{{this.name}}" name="who" class="custom-control-input" value="{{this.name}}"
+                {{#ifeq this.name ../options.who}} checked {{/ifeq}} {{!-- {{#if this.name}} checked {{/if}} --}}>
+              <label for="{{this.name}}" class="custom-control-label">{{this.chname}}</label>
+            </div>
           </div>
+      {{!-- </label> --}}
         </div>
-      </div>
-      {{/each}}
-    </div>
-    <div class="form-row mt-5" id="from-row-btn-textarea">
-      <dvi class="submit-btn col-md-2">
-        <button type="submit" id="submit-ben" class="btn btn-primary modal-dialog-xl">產生幹話</button>
-      </dvi>
-      <div class="col-md-10">
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">{{trashTalk}}</textarea>
-      </div>
-    </div>
-  </form>
-</div> --
+     {{/each}}
+   </div>
+<div class="form-row mt-5" id="from-row-btn-textarea">
+  <dvi class="submit-btn col-md-2">
+    <button type="submit" id="submit-ben" class="btn btn-primary modal-dialog-xl">產生幹話</button>
+  </dvi>
+  <div class="col-md-10">
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">{{trashTalk}}</textarea>
+  </div>
+</div>
+</form>
+</div>
