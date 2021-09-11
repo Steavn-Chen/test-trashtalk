@@ -3,64 +3,26 @@
     你想對誰說幹話!
   </div>
   <form action="/" method="POST">
-        <div class="card-deck">
-            <div class="card">
-              <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-
-developer.jpg" class="card-img-top" alt="...">
-              <div class="card-body h-100">
-                <div class="custom-control custom-radio ">
-                  <input type="radio" id="engineer" name="engineer" class="custom-control-input">
-                  <label for="engineer" class="custom-control-label">工程師<label>
-                </div>
-              </div>
-            </div>
-
-            <div class="card">
-              <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-
-
-designer.jpg" class="card-img-top" alt="...">
-              <div class="card-body card-body-inline">
-                <div class="custom-control custom-radio ">
-                  <input type="radio" id="designer" name="designer" class="custom-control-input">
-                  <label for="designer" class="custom-control-label">設計師</label>
-                </div>
-
-              </div>
-            </div>
-            <div class="card">
-              <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-
-
-founder.jpg" class="card-img-top" alt="...">
-              <div class="card-body card-body-inline">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="entrepreneur" name="entrepreneur" class="custom-control-input">
-                  <label for="entrepreneur" class="custom-control-label">創業家<label>
-                </div>
-
-              </div>
-            </div>
-            <div class="card">
-              <img
-                src="https://s167.daydaynews.cc/?url=http%3A%2F%2Fp3.pstatp.com%2Flarge%2Fpgc-image%2Faefb0c91af42430d926a59e63f983ddf"
-                class="card-img-top" alt="...">
-              <div class="card-body card-body-inline">
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="repairman" name="repairman" class="custom-control-input">
-                  <label for="repairman" class="custom-control-label">修車員</label>
-                </div>
-              </div>
-            </div>
+    <div class="card-deck">
+       {{#each personList}}
+         <div class="card">
+        <img src="{{this .image}}" class="card-img-top" alt="...">
+        <div class="card-body ">
+          <div class="custom-control custom-radio ">
+            <input type="radio" id="{{this.name}}" name="who" class="custom-control-input" value="{{this.name}}">
+            <label for="{{this.name}}" class="custom-control-label">{{this.chname}}</label>
           </div>
-
-          <div class="form-row mt-5" id="from-row-btn-textarea">
-            <dvi class="submit-btn col-md-2">
-              <button type="submit" id="submit-ben" class="btn btn-primary modal-dialog-xl">產生幹話
-
-              </button>
-            </dvi>
-            <div class="col-md-10">
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    <div class="form-row mt-5" id="from-row-btn-textarea">
+      <dvi class="submit-btn col-md-2">
+        <button type="submit" id="submit-ben" class="btn btn-primary modal-dialog-xl">產生幹話</button>
+      </dvi>
+      <div class="col-md-10">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">{{trashTalk}}</textarea>
+      </div>
+    </div>
   </form>
-</div>
+</div> --

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "engineer",
+    "chname": "工程師",
+    "image": "https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+  },
+  {
+    "name": "designer",
+    "chname": "設計師",
+    "image": "https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+  },
+  {
+    "name": "entrepreneur",
+    "chname": "創業家",
+    "image": "https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+  },
+  {
+    "name": "repairman",
+    "chname": "修車員",
+    "image": "https://s167.daydaynews.cc/?url=http%3A%2F%2Fp3.pstatp.com%2Flarge%2Fpgc-image%2Faefb0c91af42430d926a59e63f983ddf"
+  }
+]
